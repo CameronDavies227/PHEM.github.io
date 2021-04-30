@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./PHEM.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>Paul Humperys Contact Form</title>
+</head>
+<body>
+    <header>
+        <img src="./images/logo.svg" class="header_image" alt="header" id="desktop">
+        <img src="./images/mobile_logo.svg" class="header_image" alt="header" id="mobile">
+        <span>Paul Humperys Engineering</span>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend> Contact Paul:</legend>
+
+                <label for="Firstname">
+                    <p>
+                        Firstname:
+                    </p>
+                </label>
+                <div class="form" id="Firstname">
+                    <input type="text" placeholder="Firstname" name="Firstname"pattern="[a-zA-Z]{2,}" onkeyup="validationFN()">
+                        <i class="fas fa-smile-beam"></i>
+                    </input>
+                    <div id="errorFN" class="error"> Please Input Your First Name</div>
+                </div>
+
+                <label for="Lastname">
+                <p>
+                    Lastname:
+                    </p>
+                </label>
+                <div class="form" id="Lastname">
+                    <input type="text" placeholder="Lastname" name="Lastname"pattern="[a-zA-Z]{2,}" onkeyup="validationLN()">
+                        <i class="fas fa-signature"></i>
+                    </input>
+                    <div id="errorLN" class="error"> Please Input Your Last Name</div>
+                </div>
+
+                <label for="Email">
+                    <p>
+                        Email:
+                    </p>
+                </label>
+                <div class="form" id="Email">
+                    <input type="text" placeholder="Email" name="Email"pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onkeyup="validationE()">
+                        <i class="fas fa-envelope"></i>
+                    </input>
+                    <div id="errorE" class="error"> Please Input a valid Email</div>
+                </div>
+
+                <label for="Phone">
+                    <p>
+                        Phone:
+                    </p>
+                </label>
+                <div class="form" id="Phone">
+                    <input type="text" placeholder="Phone" name="Phone"pattern="[a-zA-Z]{2,}" onkeyup="validationP()">
+                        <i class="fas fa-phone-square"></i>    
+                    </input>
+                    <div id="errorP" class="error"> Please Input a valid Phone Number</div>
+                </div>
+
+                <label for="Subject">
+                    <p>
+                        Subject:
+                    </p>
+                </label>
+                <div class="form" id="Subject">
+                    <input type="text" placeholder="Subject" name="Subject"pattern="[a-zA-Z]{2,}" onkeyup="validation()">
+                        <i class="fas fa-briefcase"></i>
+                    </input>
+                    <div id="errorFname" class="errorF"> Please Choose the Subject of the Message</div>
+                </div>
+
+                <!-- <ul> 
+                    <li><a href='./index.html#' accesskey="h">Home</a></li>
+                    <li><a href='./book_photoshoot.html#' accesskey="b">Photoshoot Bookings</a></li>          
+                    <li><a href='./contact_us.html#' accesskey="c">Contact us</a></li>
+                    <li><a href='./gallery.html#' accesskey="g">Client Gallery</a></li>
+                    <li><a href='./work_pricing.html#' accesskey="q">Job Quotes</a></li>
+                </ul>  -->
+
+                <label for="Message">
+                    <p>
+                        Message:
+                    </p>
+                </label>
+                <div class="form" id="Message">
+                    <textarea name="message" id="message-box" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="mail-list">
+                    <label for="mail-list">Subscribe to the mailing list?</label>
+                    <input type="checkbox" name="mail-list" id="mail-list-box">
+                    <input type="submit" value="Submit">
+                </div>
+
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <p id="desktop">paul.humphreys@phem.com.au</p>
+        <div>
+            <i class="far fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;2021
+        </div>
+        <div id="mobile_footer">PHEM</div>
+    </footer>
+</body>
+</html>
