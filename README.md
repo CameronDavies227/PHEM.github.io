@@ -1,2 +1,2 @@
 # CameronDavies227.github.io
-see I'm very stupid
+Currently hosting Assignment 3
