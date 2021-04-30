@@ -1,0 +1,139 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: grey;
+}
+
+@media only screen and (min-width: 500px){
+    header{
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+
+    #desktop{
+        margin: 0;
+        padding: 0;
+        width: 5vw;
+        display: flex;
+        visibility: visible;
+        height: 5vw;
+    }
+
+    #mobile{
+        display: none;
+    }
+
+    #mobile_footer{
+        display: none;
+    }
+
+    span{
+        margin: 0;
+        padding: 0;
+        height: 5vw;
+        width: 95vw;
+        display: flex;
+        background-color: #013542ff;
+        color: #feffff;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form{
+        position: relative;
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 500px){
+    #desktop{
+        display: none;
+    }
+
+    #mobile{
+        margin: 0;
+        padding: 0;
+        height: 5vh;
+        display: block;
+        justify-content: center;
+        visibility: visible;
+        height: auto;
+        width: 100%;
+    }
+
+    span{
+        display: none;
+        background-color: #013542ff;
+        height: 15vh;
+        width: 100vw;
+    }
+
+    form{
+        padding: 0;
+    }
+
+    .form{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #mobile_footer{
+        display: flex;
+        justify-content: center;
+        visibility: visible;
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+
+.form input{
+    display: block;
+    width: 100%;
+}
+
+.form i{
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+
+form {
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background-color: white;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+label {
+    font-size: 0.5em;
+}
+
+#checkbox {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+}
+
+i {
+    z-index: 1;
+    position: absolute;
+}
+
+footer{
+    background-color: #013542ff;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    color: #02a5c8;
+}
