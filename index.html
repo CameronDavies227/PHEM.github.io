@@ -26,7 +26,7 @@
                     </p>
                 </label>
                 <div class="form" id="Firstname">
-                    <input type="text" placeholder="Firstname" name="Firstname"pattern="[a-zA-Z]{2,}" onkeyup="validationFN()">
+                    <input class="box" type="text" placeholder="Firstname" name="Firstname"pattern="[a-zA-Z]{2,}" onkeyup="validationFN()">
                         <i class="fas fa-smile-beam"></i>
                     </input>
                     <div id="errorFN" class="error"> Please Input Your First Name</div>
@@ -38,7 +38,7 @@
                     </p>
                 </label>
                 <div class="form" id="Lastname">
-                    <input type="text" placeholder="Lastname" name="Lastname"pattern="[a-zA-Z]{2,}" onkeyup="validationLN()">
+                    <input class="box" type="text" placeholder="Lastname" name="Lastname"pattern="[a-zA-Z]{2,}" onkeyup="validationLN()">
                         <i class="fas fa-signature"></i>
                     </input>
                     <div id="errorLN" class="error"> Please Input Your Last Name</div>
@@ -50,7 +50,7 @@
                     </p>
                 </label>
                 <div class="form" id="Email">
-                    <input type="text" placeholder="Email" name="Email"pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onkeyup="validationE()">
+                    <input class="box" type="text" placeholder="Email" name="Email"pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onkeyup="validationE()">
                         <i class="fas fa-envelope"></i>
                     </input>
                     <div id="errorE" class="error"> Please Input a valid Email</div>
@@ -62,7 +62,7 @@
                     </p>
                 </label>
                 <div class="form" id="Phone">
-                    <input type="text" placeholder="Phone" name="Phone"pattern="[a-zA-Z]{2,}" onkeyup="validationP()">
+                    <input class="box" type="text" placeholder="Phone" name="Phone"pattern="[a-zA-Z]{2,}" onkeyup="validationP()">
                         <i class="fas fa-phone-square"></i>    
                     </input>
                     <div id="errorP" class="error"> Please Input a valid Phone Number</div>
@@ -74,10 +74,15 @@
                     </p>
                 </label>
                 <div class="form" id="Subject">
-                    <input type="text" placeholder="Subject" name="Subject"pattern="[a-zA-Z]{2,}" onkeyup="validation()">
+                    <select class="box" name="Subjects">
+                        <option value="none">-------</option>
+                        <option value="volvo">Miscilanious</option>
+                        <option value="saab">Electronics</option>
+                        <option value="fiat">Mechanical</option>
+                        <option value="audi">Industrial</option>
                         <i class="fas fa-briefcase"></i>
-                    </input>
-                    <div id="errorFname" class="errorF"> Please Choose the Subject of the Message</div>
+                    </select>
+                    <div id="errorS" class="error"> Please Choose the Subject of the Message</div>
                 </div>
 
                 <!-- <ul> 
@@ -94,7 +99,7 @@
                     </p>
                 </label>
                 <div class="form" id="Message">
-                    <textarea name="message" id="message-box" cols="30" rows="10"></textarea>
+                    <textarea class="box" name="message" id="message-box" cols="30" rows="10"></textarea>
                 </div>
 
                 <div class="mail-list">
