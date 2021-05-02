@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./PHEM.js" defer></script>
+    <script src="./javascript/js.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <title>Paul Humperys Contact Form</title>
 </head>
@@ -26,10 +26,11 @@
                     </p>
                 </label>
                 <div class="form" id="Firstname">
-                    <input class="box" type="text" placeholder="Firstname" name="Firstname"pattern="[a-zA-Z]{2,}" onkeyup="validationFN()">
+                    <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" 
+                    placeholder="Firstname" name="Please Input Your First Name" pattern="[a-zA-Z-]{2,}">
                         <i class="fas fa-smile-beam"></i>
                     </input>
-                    <div id="errorFN" class="error"> Please Input Your First Name</div>
+                    <div id="errorFN" class="error"> </div>
                 </div>
 
                 <label for="Lastname">
@@ -38,10 +39,11 @@
                     </p>
                 </label>
                 <div class="form" id="Lastname">
-                    <input class="box" type="text" placeholder="Lastname" name="Lastname"pattern="[a-zA-Z]{2,}" onkeyup="validationLN()">
+                    <input class="box" type="text" placeholder="Lastname"
+                    name="Please Input Your Last Name" pattern="[a-zA-Z-]{2,}" onchange="errorcheck(this, 'errorLN')">
                         <i class="fas fa-signature"></i>
                     </input>
-                    <div id="errorLN" class="error"> Please Input Your Last Name</div>
+                    <div id="errorLN" class="error" > </div>
                 </div>
 
                 <label for="Email">
@@ -50,10 +52,11 @@
                     </p>
                 </label>
                 <div class="form" id="Email">
-                    <input class="box" type="text" placeholder="Email" name="Email"pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onkeyup="validationE()">
+                    <input class="box" type="text" placeholder="Email" name="Please Input a valid Email"
+                    pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onchange="errorcheck(this, 'errorE')">
                         <i class="fas fa-envelope"></i>
                     </input>
-                    <div id="errorE" class="error"> Please Input a valid Email</div>
+                    <div id="errorE" class="error" > </div>
                 </div>
 
                 <label for="Phone">
@@ -62,10 +65,11 @@
                     </p>
                 </label>
                 <div class="form" id="Phone">
-                    <input class="box" type="text" placeholder="Phone" name="Phone"pattern="[a-zA-Z]{2,}" onkeyup="validationP()">
+                    <input class="box" type="text" placeholder="Phone" name="Please Input a valid Phone Number"
+                     pattern="[0-9]{8,}" onchange="errorcheck(this, 'errorP')">
                         <i class="fas fa-phone-square"></i>    
                     </input>
-                    <div id="errorP" class="error"> Please Input a valid Phone Number</div>
+                    <div id="errorP" class="error"> </div>
                 </div>
 
                 <label for="Subject">
@@ -74,15 +78,15 @@
                     </p>
                 </label>
                 <div class="form" id="Subject">
-                    <select class="box" name="Subjects">
-                        <option value="none">-------</option>
-                        <option value="volvo">Miscilanious</option>
-                        <option value="saab">Electronics</option>
-                        <option value="fiat">Mechanical</option>
-                        <option value="audi">Industrial</option>
+                    <select class="box" name="Please Choose the Subject of the Message" onchange="subjectcheck(this, 'errorS')">
+                        <option value="1">-------</option>
+                        <option value="2">Miscilanious</option>
+                        <option value="3">Electronics</option>
+                        <option value="4">Mechanical</option>
+                        <option value="5">Industrial</option>
                         <i class="fas fa-briefcase"></i>
                     </select>
-                    <div id="errorS" class="error"> Please Choose the Subject of the Message</div>
+                    <div id="errorS" class="error"> </div>
                 </div>
 
                 <!-- <ul> 
