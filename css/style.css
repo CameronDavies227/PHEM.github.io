@@ -29,7 +29,11 @@ body {
         display: none;
     }
 
-    span{
+    #m{
+        display: none;
+    }
+
+    #d{
         margin: 0;
         padding: 0;
         height: 10vw;
@@ -83,11 +87,15 @@ body {
         width: 100%;
     }
 
-    span{
+    #d{
         display: none;
+    }
+
+    #m{
+        display: flex;
         background-color: #013542ff;
         height: 15vh;
-        width: 100vw;
+        width: auto;
     }
 
     form{
