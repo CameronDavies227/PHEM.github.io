@@ -92,7 +92,10 @@
                     <label for="Message">
                         Message:
                     </label>
-                    <textarea class="box" name="message" id="message-box" cols="30" rows="10"></textarea>
+                    <textarea class="box" name="message" name="Please write a Message of at least 5 Charecters"
+                    id="message-box" cols="30" rows="10" pattern="[a-z0-9._%+-]{5,}" placeholder="Message.."
+                    onchange="subjectcheck(this, 'errorM')" required></textarea>
+                    <div id="errorM" class="error"> </div>
                 </div>
 
                 <div class="mail-list">
