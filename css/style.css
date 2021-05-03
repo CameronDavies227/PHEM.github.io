@@ -42,10 +42,30 @@ body {
         font-size: 5vw;
     }
 
+    form{
+        padding: 20px;
+    }
+
+    label{
+        display: block;
+    }
+
     .form{
         position: relative;
         width: 90%;
+        padding: 0px;
     }
+
+    .form input{
+        font-size: 1em;
+    }
+
+    .form i{
+        top: 2.2em;
+        font-size: 1em;
+    }
+
+
 }
 @media only screen and (max-width: 500px){
     #desktop{
@@ -55,7 +75,7 @@ body {
     #mobile{
         margin: 0;
         padding: 0;
-        height: 5vh;
+        height: 10vh;
         display: block;
         justify-content: center;
         visibility: visible;
@@ -71,7 +91,19 @@ body {
     }
 
     form{
-        padding: 0;
+        padding: 0px;
+        max-width: none;
+        width: 100%;
+        padding-bottom: 1em;
+        box-sizing: border-box;
+    }
+
+    label{
+        display: none;
+    }
+
+    #mail-list > label{
+        display: block;
     }
 
     .form{
@@ -81,6 +113,19 @@ body {
         padding: 0;
     }
 
+    .form input{
+        font-size: 2em;
+    }
+
+    .form i{
+        top: .6em;
+        font-size: 2em;
+    }
+
+    #Subject{
+        display: none;
+    }
+
     #mobile_footer{
         display: flex;
         justify-content: center;
@@ -88,25 +133,41 @@ body {
         height: auto;
         width: 100%;
     }
+
+    p{
+        margin: 0;
+    }
+}
+
+#intro{
+    margin: 0 0 1em 0;
+    font-size: 1.4em;
 }
 
 .box{
     border: 1px solid black;
 }
 
+div{
+    margin-bottom: 0.5em;
+}
+
+
 .form input{
     display: block;
     width: 100%;
 }
 
+.form{
+    padding-top: 15px;
+}
+
 .form i{
     position: absolute;
     right: 0;
-    top: 3px;
 }
 
 form {
-    padding: 20px;
     width: 100%;
     max-width: 400px;
     margin: auto;
@@ -123,8 +184,18 @@ label {
     font-size: 1em;
 }
 
+input:required~label::after,
+#subject~label::after
+ {
+    content: " *";
+    font-size: 1.5em;
+    color: orangered;
+}
+
 .error{
-    background-color: #FF8484;
+    color: #FF8484;
+    font-size: 0.8em;
+    height: 0.8em;
 }
 
 #checkbox {
@@ -138,9 +209,20 @@ i {
     position: absolute;
 }
 
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: red;
+    border-style: solid;
+}
+
+input:valid:not(:placeholder-shown):not([type="submit"]),
+textarea:valid:not(:placeholder-shown) {
+    border-color: green;
+    border-style: solid;
+}
+
 footer{
     background-color: #013542ff;
-    height: 10vh;
     width: 100%;
     justify-content: center;
     color: #02a5c8;

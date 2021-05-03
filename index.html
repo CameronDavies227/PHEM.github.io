@@ -13,32 +13,33 @@
     <header>
         <img src="./images/logo.svg" class="header_image" alt="header" id="desktop">
         <img src="./images/mobile_logo.svg" class="header_image" alt="header" id="mobile">
-        <span>Paul Humperys Engineering</span>
+        <span>Paul Humphreys Engineering</span>
     </header>
     <main>
         <form>
+            <p id="intro">
+                While Paul Humphreys Electonics & Mechatronics pty Ltd is setting up the our website, please use this form to contact Paul directly.
+            </p>
             <fieldset>
                 <legend> Contact Paul:</legend>
 
-                <label for="Firstname">
-                    <p>
-                        Firstname:
-                    </p>
-                </label>
+
                 <div class="form" id="Firstname">
-                    <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" 
+                    <label for="Firstname">
+                        Firstname:
+                    </label>
+                    <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" required 
                     placeholder="Firstname" name="Please Input Your First Name" pattern="[a-zA-Z-]{2,}">
                         <i class="fas fa-smile-beam"></i>
                     </input>
                     <div id="errorFN" class="error"> </div>
                 </div>
 
-                <label for="Lastname">
-                <p>
-                    Lastname:
-                    </p>
-                </label>
+
                 <div class="form" id="Lastname">
+                    <label for="Lastname">
+                        Lastname:
+                    </label>
                     <input class="box" type="text" placeholder="Lastname"
                     name="Please Input Your Last Name" pattern="[a-zA-Z-]{2,}" onchange="errorcheck(this, 'errorLN')">
                         <i class="fas fa-signature"></i>
@@ -46,25 +47,23 @@
                     <div id="errorLN" class="error" > </div>
                 </div>
 
-                <label for="Email">
-                    <p>
-                        Email:
-                    </p>
-                </label>
+
                 <div class="form" id="Email">
-                    <input class="box" type="text" placeholder="Email" name="Please Input a valid Email"
+                    <label for="Email">
+                        Email:
+                    </label>
+                    <input class="box" type="text" placeholder="Email" name="Please Input a valid Email" required
                     pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onchange="errorcheck(this, 'errorE')">
                         <i class="fas fa-envelope"></i>
                     </input>
                     <div id="errorE" class="error" > </div>
                 </div>
 
-                <label for="Phone">
-                    <p>
-                        Phone:
-                    </p>
-                </label>
+
                 <div class="form" id="Phone">
+                    <label for="Phone">
+                        Phone:                    
+                    </label>
                     <input class="box" type="text" placeholder="Phone" name="Please Input a valid Phone Number"
                      pattern="[0-9]{8,}" onchange="errorcheck(this, 'errorP')">
                         <i class="fas fa-phone-square"></i>    
@@ -72,14 +71,14 @@
                     <div id="errorP" class="error"> </div>
                 </div>
 
-                <label for="Subject">
-                    <p>
-                        Subject:
-                    </p>
-                </label>
+
                 <div class="form" id="Subject">
-                    <select class="box" name="Please Choose the Subject of the Message" onchange="subjectcheck(this, 'errorS')">
-                        <option value="1">-------</option>
+                    <label for="Subject">
+                        Subject:
+                    </label>
+                    <select class="box" name="Please Choose the Subject of the Message" 
+                    onchange="subjectcheck(this, 'errorS')" required>
+                        <option value="1">Subject</option>
                         <option value="2">Miscilanious</option>
                         <option value="3">Electronics</option>
                         <option value="4">Mechanical</option>
@@ -89,20 +88,10 @@
                     <div id="errorS" class="error"> </div>
                 </div>
 
-                <!-- <ul> 
-                    <li><a href='./index.html#' accesskey="h">Home</a></li>
-                    <li><a href='./book_photoshoot.html#' accesskey="b">Photoshoot Bookings</a></li>          
-                    <li><a href='./contact_us.html#' accesskey="c">Contact us</a></li>
-                    <li><a href='./gallery.html#' accesskey="g">Client Gallery</a></li>
-                    <li><a href='./work_pricing.html#' accesskey="q">Job Quotes</a></li>
-                </ul>  -->
-
-                <label for="Message">
-                    <p>
-                        Message:
-                    </p>
-                </label>
                 <div class="form" id="Message">
+                    <label for="Message">
+                        Message:
+                    </label>
                     <textarea class="box" name="message" id="message-box" cols="30" rows="10"></textarea>
                 </div>
 
@@ -117,10 +106,8 @@
     </main>
     <footer>
         <p id="desktop">paul.humphreys@phem.com.au</p>
-        <div>
-            <i class="far fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;2021
-        </div>
-        <div id="mobile_footer">PHEM</div>
+            <i class="far fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;Paul Humphreys Electonics & Mechatronics 2021
+        <p id="mobile_footer">PHEM</p>
     </footer>
 </body>
 </html>
