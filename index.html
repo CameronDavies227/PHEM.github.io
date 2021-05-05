@@ -27,7 +27,7 @@
 
 
                 <div class="form" id="Firstname">
-                    <label for="Firstname">
+                    <label for="Firstname" id="required">
                         Firstname:
                     </label>
                     <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" required 
@@ -51,7 +51,7 @@
 
 
                 <div class="form" id="Email">
-                    <label for="Email">
+                    <label for="Email" id="required">
                         Email:
                     </label>
                     <input class="box" type="text" placeholder="Email" name="Please Input a valid Email" required
@@ -75,7 +75,7 @@
 
 
                 <div class="form" id="Subject">
-                    <label for="Subject">
+                    <label for="Subject" id="required">
                         Subject:
                     </label>
                     <select class="box" name="Please Choose the Subject of the Message" 
@@ -95,15 +95,24 @@
                         Message:
                     </label>
                     <textarea class="box" name="message" name="Please write a Message of at least 5 Charecters"
-                    id="message-box" cols="30" rows="10" pattern="[a-z0-9._%+-]{5,}" placeholder="Message.."
+                    id="message-box" cols="30" rows="10" pattern="[a-z0-9._%+-]{5,}" maxlength="350" placeholder="Message.."
                     onchange="subjectcheck(this, 'errorM')" required></textarea>
                     <div id="errorM" class="error"> </div>
                 </div>
 
+                <div id="help">
+                    <i class="fas fa-cogs"></i>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H9VDkvgGmVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <p id="disclaimer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* denotes a required field</p>
+
+
                 <div class="mail-list">
+                    <p for="mail-list" id="mob">Subscribe to the mailing list?</p>
                     <label for="mail-list">Subscribe to the mailing list?</label>
                     <input type="checkbox" name="mail-list" id="mail-list-box">
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="submit">
                 </div>
 
             </fieldset>
