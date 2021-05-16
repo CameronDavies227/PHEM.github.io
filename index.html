@@ -31,7 +31,7 @@
                         Firstname:
                     </label>
                     <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" required 
-                    placeholder="Firstname" name="Please Input Your First Name" pattern="[a-zA-Z-]{2,}">
+                    placeholder="Firstname" pattern="[a-zA-Z-]{2,}">
                         <i class="fas fa-smile-beam"></i>
                     </input>
                     <div id='errorFN' class="error" title="Please Input Your First Name"> </div>
@@ -43,10 +43,10 @@
                         Lastname:
                     </label>
                     <input class="box" type="text" placeholder="Lastname"
-                    name="Please Input Your Last Name" pattern="[a-zA-Z-]{2,}" onchange="errorcheck(this, 'errorLN')">
+                     pattern="[a-zA-Z-]{2,}" onchange="errorcheck(this, 'errorLN')">
                         <i class="fas fa-signature"></i>
                     </input>
-                    <div id="errorLN" class="error" > </div>
+                    <div id="errorLN" class="error" name="Please Input Your Last Name"> </div>
                 </div>
 
 
@@ -54,11 +54,11 @@
                     <label for="Email" id="required">
                         Email:
                     </label>
-                    <input class="box" type="text" placeholder="Email" id="Please Input a valid Email" required
+                    <input class="box" type="text" placeholder="Email"  required
                     pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onchange="errorcheck(this, 'errorE')">
                         <i class="fas fa-envelope"></i>
                     </input>
-                    <div id="errorE" class="error" > </div>
+                    <div id="errorE" class="error" title="Please Input a valid Email"> </div>
                 </div>
 
 
@@ -66,11 +66,11 @@
                     <label for="Phone">
                         Phone:                    
                     </label>
-                    <input class="box" type="text" placeholder="Phone" name="Please Input a valid Phone Number"
+                    <input class="box" type="text" placeholder="Phone" 
                      pattern="[0-9]{8,}" onchange="errorcheck(this, 'errorP')">
                         <i class="fas fa-phone-square"></i>    
                     </input>
-                    <div id="errorP" class="error"> </div>
+                    <div id="errorP" class="error" title="Please Input a valid Phone Number"> </div>
                 </div>
 
 
@@ -94,10 +94,10 @@
                     <label for="Message">
                         Message:
                     </label>
-                    <textarea class="box" name="message" name="Please write a Message of at least 5 Charecters"
+                    <textarea class="box" name="message" 
                     id="message-box" cols="30" rows="10" pattern="[a-z0-9._%+-]{5,}" maxlength="350" placeholder="Message.."
                     onchange="subjectcheck(this, 'errorM')" required></textarea>
-                    <div id="errorM" class="error"> </div>
+                    <div id="errorM" class="error" title="Please write a Message of at least 5 Charecters"> </div>
                 </div>
 
                 <div id="help">
