@@ -7,3 +7,12 @@ function errorcheck(value, message) {
         console.log('meow');
     }
 }
+function subjectcheck(value, message){
+    if (value.value==1 && screen.width > 500) {
+        document.getElementById(message).innerHTML = value.name
+        console.log('woof');
+    } else {
+        document.getElementById(message).innerHTML = ""
+        console.log('meow');
+    }
+}
