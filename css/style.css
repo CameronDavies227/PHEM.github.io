@@ -200,7 +200,7 @@ label {
     font-size: 1em;
 }
 
-#required::after
+input:required::after
  {
     content: " *";
     font-size: 1em;

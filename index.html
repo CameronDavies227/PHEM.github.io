@@ -27,7 +27,7 @@
 
 
                 <div class="form" id="Firstname">
-                    <label for="Firstname" id="required">
+                    <label for="Firstname">
                         Firstname:
                     </label>
                     <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" required 
@@ -51,7 +51,7 @@
 
 
                 <div class="form" id="Email">
-                    <label for="Email" id="required">
+                    <label for="Email">
                         Email:
                     </label>
                     <input class="box" type="text" placeholder="Email"  required
@@ -112,7 +112,8 @@
                     <p for="mail-list" id="mob">Subscribe to the mailing list?</p>
                     <label for="mail-list">Subscribe to the mailing list?</label>
                     <input type="checkbox" name="mail-list" id="mail-list-box">
-                    <input type="submit" value="Submit" id="submit">
+                    <input type="submit" value="Submit" id="submit" onkeypress="errorcheck('Firstname', 'errorFN'), errorcheck('Lastname', 'errorLN'),
+                     errorcheck('Email', 'errorE'), errorcheck('Phone', 'errorP'), subjectcheck('Subject', 'errorS;'), errorcheck('Message', 'errorM')">
                 </div>
 
             </fieldset>
