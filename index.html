@@ -54,7 +54,7 @@
                     <label for="Email" id="required">
                         Email:
                     </label>
-                    <input class="box" type="text" placeholder="Email" name="Please Input a valid Email" required
+                    <input class="box" type="text" placeholder="Email" id="Please Input a valid Email" required
                     pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,}" onchange="errorcheck(this, 'errorE')">
                         <i class="fas fa-envelope"></i>
                     </input>
@@ -75,11 +75,11 @@
 
 
                 <div class="form" id="Subject">
-                    <label for="Subject" id="required">
+                    <label for="Subject">
                         Subject:
                     </label>
                     <select class="box" name="Please Choose the Subject of the Message" 
-                    onchange="subjectcheck(this, 'errorS')" required>
+                    onchange="subjectcheck(this, 'errorS')">
                         <option value="1">Subject</option>
                         <option value="2">Miscilanious</option>
                         <option value="3">Electronics</option>
