@@ -11,7 +11,6 @@ body {
         display: flex;
     }
 
-
     #desktop{
         margin: 0;
         padding: 0;
@@ -51,7 +50,8 @@ body {
     }
 
     label{
-        display: block;
+        font-size: 1em;
+        height: 1em;
     }
 
     .form{
@@ -65,8 +65,12 @@ body {
     }
 
     .form i{
-        top: 2.3em;
+        top: 2.7em;
         font-size: 1em;
+    }
+
+    .form textarea{
+        margin-top: -5em;
     }
 
     #mob{
@@ -111,7 +115,7 @@ body {
     }
 
     label{
-        display: none;
+        font-size: 1.8em;
     }
 
     #mail-list > label{
@@ -130,12 +134,16 @@ body {
     }
 
     .form i{
-        top: .6em;
+        top: 1.9em;
         font-size: 2em;
     }
 
     #Subject{
         display: none;
+    }
+
+    .form textarea{
+        margin-top: -4.5em;
     }
 
     #mob{
@@ -172,10 +180,21 @@ div{
 .form input{
     display: block;
     width: 100%;
+    grid-row: 2;
+}
+
+.form textarea{
+    display: block;
+    width: 100%;
+    grid-row: 2;
 }
 
 .form{
     padding-top: 15px;
+    display: grid;  
+    grid-gap: .1em;
+    grid-template-columns: auto;
+    grid-template-rows: 5fr 5fr;
 }
 
 .form i{
@@ -186,6 +205,7 @@ div{
 form {
     width: 100%;
     max-width: 400px;
+    display: grid;
     margin: auto;
     background-color: white;
 }
@@ -197,11 +217,10 @@ form {
 }
 
 label {
-    font-size: 1em;
+    grid-row: 1;
 }
 
-input:required::after
- {
+:required ~ label::after{
     content: " *";
     font-size: 1em;
     color: orangered;
