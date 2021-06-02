@@ -73,6 +73,8 @@ body {
         margin-top: -5em;
     }
 
+
+
     #mob{
         display: none;
     }
@@ -81,6 +83,10 @@ body {
 }
 @media only screen and (max-width: 500px){
     #desktop{
+        display: none;
+    }
+
+    #dt{
         display: none;
     }
 
@@ -96,6 +102,10 @@ body {
     }
 
     #d{
+        display: none;
+    }
+
+    #d-only{
         display: none;
     }
 
@@ -116,10 +126,6 @@ body {
 
     label{
         font-size: 1.8em;
-    }
-
-    #mail-list > label{
-        display: block;
     }
 
     .form{
@@ -230,6 +236,7 @@ label {
     color: #FF8484;
     font-size: 0.8em;
     height: 0.8em;
+    grid-row: 3;
 }
 
 #checkbox {

@@ -30,8 +30,7 @@
                     <input class="box" type="text" onchange="errorcheck(this, 'errorFN')" required 
                     placeholder="Firstname" pattern="[a-zA-Z-]{2,}">
                         <i class="fas fa-smile-beam"></i>
-                    </input>
-                    <label for="Firstname">
+                    <label>
                         Firstname:
                     </label>
                     <div id='errorFN' class="error" title="Please Input Your First Name"> </div>
@@ -42,8 +41,7 @@
                     <input class="box" type="text" placeholder="Lastname"
                      pattern="[a-zA-Z-]{2,}" onchange="errorcheck(this, 'errorLN')">
                         <i class="fas fa-signature"></i>
-                    </input>
-                    <label for="Lastname">
+                    <label>
                         Lastname:
                     </label>
                     <div id="errorLN" class="error" title="Please Input Your Last Name"> </div>
@@ -54,8 +52,7 @@
                     <input class="box" type="text" placeholder="Email"  required
                     pattern="[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,})" onchange="errorcheck(this, 'errorE')">
                         <i class="fas fa-envelope"></i>
-                    </input>
-                    <label for="Email">
+                    <label>
                         Email:
                     </label>
                     <div id="errorE" class="error" title="Please Input a valid Email"> </div>
@@ -66,8 +63,7 @@
                     <input class="box" type="text" placeholder="Phone" 
                      pattern="[0-9]{8,10}" onchange="errorcheck(this, 'errorP')">
                         <i class="fas fa-phone-square"></i>    
-                    </input>
-                    <label for="Phone">
+                    <label>
                         Phone:                    
                     </label>
                     <div id="errorP" class="error" title="Please Input a valid Phone Number"> </div>
@@ -82,50 +78,43 @@
                         <option value="3">Electronics</option>
                         <option value="4">Mechanical</option>
                         <option value="5">Industrial</option>
-                        <i class="fas fa-briefcase"></i>
                     </select>
-                    <label for="Subject">
+                    <label>
                         Subject:
                     </label>
                     <div id="errorS" class="error" title="Please Choose the Subject of the Message"> </div>
                 </div>
 
                 <div class="form" id="Message">
-                    <label for="Message">
+                    <label>
                         Message:
                     </label>
                     <textarea class="box" 
-                    id="message-box" cols="30" rows="10" pattern="[a-z0-9._%+-]{5,}" maxlength="350" placeholder="Message.."
+                    id="message-box" cols="30" rows="10" maxlength="350" placeholder="Message.."
                     onchange="errorcheck(this, 'errorM')" required></textarea>
                     <div id="errorM" class="error" title="Please write a Message of at least 5 Charecters"> </div>
                 </div>
 
                 <div id="help">
                     <i class="fas fa-cogs"></i>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H9VDkvgGmVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H9VDkvgGmVo" title="YouTube video player" allowfullscreen></iframe>
                 </div>
 
                 <p id="disclaimer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* denotes a required field</p>
 
 
                 <div class="mail-list">
-                    <p for="mail-list" id="mob">Subscribe to the mailing list?</p>
-                    <label for="mail-list">Subscribe to the mailing list?</label>
+                    <p id="mob">Subscribe to the mailing list?</p>
+                    <label id="d-only">Subscribe to the mailing list?</label>
                     <input type="checkbox" id="mail-list-box">
-
-
-
-
-                    <input type="button" value="check" onclick="formcheck()">
-                    <input type="submit" value="Submit" id="submit" onclick="errorcheck('Firstname', 'errorFN'), errorcheck('Lastname', 'errorLN'),
-                     errorcheck('Email', 'errorE'), errorcheck('Phone', 'errorP'), subjectcheck('Subject', 'errorS;'), errorcheck('Message', 'errorM')">
+                    <input type="submit" value="Submit" id="submit">
                 </div>
 
             </fieldset>
         </form>
     </main>
     <footer>
-        <p id="desktop">paul.humphreys@phem.com.au</p>
+        <p id="dt">paul.humphreys@phem.com.au</p>
             <i class="far fa-copyright"></i>&nbsp;&nbsp;&nbsp;&nbsp;Paul Humphreys Electonics & Mechatronics 2021
         <p id="mobile_footer">PHEM</p>
     </footer>
