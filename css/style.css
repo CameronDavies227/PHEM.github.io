@@ -1,7 +1,9 @@
 body {
     font-family: sans-serif;
     margin: 0;
+    padding: 0;
     background-color: grey;
+    width: 100%;
 }
 
 @media only screen and (min-width: 500px){
@@ -46,7 +48,7 @@ body {
     }
 
     form{
-        padding: 0px;
+        padding: 20px;
     }
 
     label{
@@ -140,7 +142,7 @@ body {
     }
 
     .form i{
-        top: 1.9em;
+        top: 2.7em;
         font-size: 2em;
     }
 
