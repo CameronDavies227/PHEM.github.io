@@ -64,6 +64,7 @@ body {
 
     .form input{
         font-size: 1em;
+        width: 100%;
     }
 
     .form i{
@@ -188,7 +189,6 @@ div{
 
 .form input{
     display: block;
-    width: 100%;
     grid-row: 2;
 }
 
